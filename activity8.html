@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Activity 8 - Indian Cuisines</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            max-width: 1000px;
+            margin: 0 auto 40px;
+        }
+
+        header h1 {
+            margin: 0 0 12px;
+            font-size: 28px;
+        }
+
+        header>div {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        header img {
+            width: 240px;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        #description {
+            margin: 0;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        /* demo of parent / child positioning like your screenshot */
+        .parent-element {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #333;
+            margin-top: 20px;
+            /* so it doesn't sit exactly at the top of the page */
+        }
+
+        .child-element {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            top: 40px;
+            left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Indian Cuisines</h1>
+        <div>
+            <img src="images/cover.jpg" alt="Cover of Indian cuisines">
+            <p id="description">
+                The traditional food of India has been widely appreciated for its fabulous use of herbs and
+                spices. Indian cuisine is known for its large assortment of dishes. The cooking style varies from region
+                to
+                region and is largely divided into South Indian &amp; North Indian cuisine. India is quite famous for
+                its
+                diverse multi cuisine available in a large number of restaurants and hotel resorts, which is reminiscent
+                of
+                unity in diversity.
+            </p>
+        </div>
+    </header>
+
+    <!-- positioned parent/child example (matches your screenshot) -->
+    <div class="parent-element">
+        <div class="child-element"></div>
+    </div>
+</body>
+
+</html>
