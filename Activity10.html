@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Activity 10 - Grid Layout</title>
+    <style>
+        :root {
+            --gap: 12px;
+            --pad: 14px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+
+        /* 5-column grid container */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-auto-rows: auto;
+            gap: var(--gap);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header,
+        nav,
+        footer {
+            grid-column: 1 / -1;
+            /* occupy all 5 columns on their own rows */
+            background: #f0f0f0;
+            padding: var(--pad);
+            border-radius: 6px;
+        }
+
+        nav {
+            background: #e8f4ff;
+        }
+
+        main {
+            grid-column: 1 / span 4;
+            /* occupy columns 1-4 */
+            background: #fff;
+            padding: var(--pad);
+            border: 1px solid #e6e6e6;
+            border-radius: 6px;
+        }
+
+        aside {
+            grid-column: 5 / 6;
+            /* occupy column 5 (single column) */
+            background: #fff9e6;
+            padding: var(--pad);
+            border: 1px solid #efe1b8;
+            border-radius: 6px;
+        }
+
+        /* small responsive tweak: stack on narrow screens */
+        @media (max-width: 700px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            main,
+            aside {
+                grid-column: 1 / -1;
+            }
+        }
+
+        h1,
+        h2 {
+            margin: 0 0 8px 0;
+        }
+
+        p {
+            margin: 0 0 10px 0;
+            line-height: 1.45;
+        }
+
+        ul {
+            margin: 6px 0 12px 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <header>
+            <h1>Indian Cuisines - Activity 10</h1>
+        </header>
+
+        <nav>
+            <!-- navbar occupies full width row -->
+            <ul style="margin:0; padding:0; list-style:none; display:flex; gap:12px;">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Regions</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Main content</h2>
+            <p>This is the main area. It occupies 4 of the 5 grid columns so the aside can sit to its right in the same
+                row.</p>
+            <p>Add your article, images or other content here.</p>
+        </main>
+
+        <!-- aside: placed between main and footer as requested -->
+        <aside aria-labelledby="aside-heading">
+            <h2 id="aside-heading">Popular Foods</h2>
+
+            <div>
+                <h3>North Indian</h3>
+                <ul>
+                    <li>Chole Bhature</li>
+                    <li>Samosa</li>
+                    <li>Jalebi</li>
+                    <li>Dahi Bhalla</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>South Indian</h3>
+                <ul>
+                    <li>Idli</li>
+                    <li>Masala Dosa</li>
+                    <li>Pongal</li>
+                    <li>Bisi Bele Bath</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Mughlai</h3>
+                <ul>
+                    <li>Chicken Biryani</li>
+                    <li>Butter Chicken</li>
+                    <li>Rogan Josh</li>
+                </ul>
+            </div>
+        </aside>
+
+        <footer>
+          
+        </footer>
+    </div>
+</body>
+
+</html>
+
