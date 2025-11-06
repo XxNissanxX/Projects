@@ -1,0 +1,127 @@
+<!-- ...existing code... -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Activity 8 - Indian Cuisines & Culture Facts</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            color: #222;
+        }
+
+        header {
+            max-width: 1000px;
+            margin: 0 auto 24px;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+            font-size: 28px;
+        }
+
+        header>div {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        header img {
+            width: 240px;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        #description {
+            margin: 0;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        /* Facts section */
+        .facts {
+            max-width: 1000px;
+            margin: 24px auto;
+            display: flex;
+            gap: 16px;
+        }
+
+        .fact {
+            background: #f8f8f8;
+            border: 1px solid #e0e0e0;
+            padding: 14px;
+            border-radius: 6px;
+            flex: 1;
+        }
+
+        .fact h3 {
+            margin: 0 0 8px;
+            font-size: 18px;
+        }
+
+        .fact p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Footer (requested as a div) */
+        #site-footer {
+            max-width: 1000px;
+            margin: 30px auto 0;
+            padding: 12px;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Indian Cuisines</h1>
+        <div>
+            <img src="images/cover.jpg" alt="Cover of Indian cuisines">
+            <p id="description">
+                The traditional food of India has been widely appreciated for its fabulous use of herbs and spices.
+                Indian cuisine is known for its large assortment of dishes. The cooking style varies from region to
+                region
+                and is largely divided into South Indian &amp; North Indian cuisine.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="facts" aria-label="Indian culture facts">
+            <div class="fact">
+                <h3>1. Linguistic Diversity</h3>
+                <p>India recognises 22 official languages and hundreds of regional dialects — language and literature
+                    are central to cultural identity.</p>
+            </div>
+
+            <div class="fact">
+                <h3>2. Festivals & Traditions</h3>
+                <p>Major festivals like Diwali, Holi, Eid and Christmas — plus countless regional celebrations — reflect
+                    the country's multi‑religious traditions.</p>
+            </div>
+
+            <div class="fact">
+                <h3>3. Cuisine & Ayurveda</h3>
+                <p>Regional cuisines are highly varied and influenced by Ayurveda; spices and cooking techniques differ
+                    widely across states and communities.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer">
+       
+    </div>
+</body>
+
+</html>
+
